@@ -1,5 +1,5 @@
 # CODSOFT
-#To-do list
+# To-do list
 ```
 def clear_screen():
     """Clears the terminal screen."""
@@ -88,7 +88,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-#calculator
+# calculator
 ```
 def calculator():
     print("Simple Calculator")
@@ -98,13 +98,13 @@ def calculator():
     print("3. Multiplication (*)")
     print("4. Division (/)")
 
-    # Get user input
+    
     try:
         num1 = float(input("Enter the first number: "))
         num2 = float(input("Enter the second number: "))
         operation = input("Enter the operation (+, -, *, /): ")
 
-        # Perform calculation based on operation
+        
         if operation == "+":
             result = num1 + num2
         elif operation == "-":
@@ -121,15 +121,15 @@ def calculator():
             print("Invalid operation. Please choose +, -, *, or /.")
             return
 
-        # Display the result
+        
         print(f"The result of {num1} {operation} {num2} is: {result}")
     except ValueError:
         print("Error: Invalid input. Please enter numeric values.")
 
-# Run the calculator function
+
 calculator()
 ```
-#password
+# password
 ```
 import random
 import string
@@ -147,19 +147,19 @@ def generate_password(length):
     if length < 1:
         raise ValueError("Password length must be at least 1")
 
-    # Define the character set for the password
+    
     characters = string.ascii_letters + string.digits + string.punctuation
 
-    # Generate a random password
+    
     password = ''.join(random.choice(characters) for _ in range(length))
     return password
 
 def main():
     try:
-        # Prompt user for password length
+        
         length = int(input("Enter the desired length of the password: "))
 
-        # Generate and display the password
+        
         password = generate_password(length)
         print(f"Generated Password: {password}")
     except ValueError:
@@ -168,7 +168,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-#rock paper
+# rock paper
 ```
 import random
 
@@ -234,7 +234,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-#contact
+# contact
 ```
 import tkinter as tk
 from tkinter import messagebox
@@ -310,11 +310,11 @@ def update_contact():
 
     save_btn.pack(pady=5)
 
-# Initialize the Tkinter application
+
 root = tk.Tk()
 root.title("Contact Manager")
 
-# Global variables
+
 contacts = []
 name_var = tk.StringVar()
 phone_var = tk.StringVar()
@@ -322,11 +322,10 @@ email_var = tk.StringVar()
 address_var = tk.StringVar()
 search_var = tk.StringVar()
 
-# UI Components
+
 frame = tk.Frame(root)
 frame.pack(padx=10, pady=10)
 
-# Input fields
 tk.Label(frame, text="Name:").grid(row=0, column=0, sticky=tk.W)
 tk.Entry(frame, textvariable=name_var).grid(row=0, column=1, padx=5, pady=5)
 
@@ -339,7 +338,7 @@ tk.Entry(frame, textvariable=email_var).grid(row=2, column=1, padx=5, pady=5)
 tk.Label(frame, text="Address:").grid(row=3, column=0, sticky=tk.W)
 tk.Entry(frame, textvariable=address_var).grid(row=3, column=1, padx=5, pady=5)
 
-# Buttons
+
 btn_frame = tk.Frame(frame)
 btn_frame.grid(row=4, column=0, columnspan=2, pady=10)
 
@@ -350,14 +349,12 @@ tk.Button(btn_frame, text="Delete Contact", command=delete_contact).grid(row=0, 
 
 save_btn = tk.Button(btn_frame, text="Save Update", command=None)
 
-# Search box
+
 tk.Label(frame, text="Search:").grid(row=5, column=0, sticky=tk.W)
 tk.Entry(frame, textvariable=search_var).grid(row=5, column=1, padx=5, pady=5)
-
-# Contact list display
 contact_list = tk.Listbox(root, width=50, height=15)
 contact_list.pack(padx=10, pady=10)
 
-# Run the Tkinter event loop
+
 root.mainloop()
 ```
