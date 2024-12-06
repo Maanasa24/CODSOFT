@@ -1,4 +1,4 @@
-# CODSOFTimport os
+# CODSOFT
 #To-do list
 ```
 def clear_screen():
